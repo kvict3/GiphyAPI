@@ -13,9 +13,9 @@
             })
             .done(function(response) {
 
-            	 var results = response.data;
+            // 	 var results = response.data;
 
-            for (var i = 0; i < results.length; i++) {
+            // for (var i = 0; i < results.length; i++) {
             	 	var villainDiv = $('<div class="villain">');
 
             	 	var rating = response.Rated
@@ -33,7 +33,7 @@
 
 
                     //--------------------------------
-                }
+                // }
 
             });
    
@@ -44,10 +44,10 @@
 		// Deletes the movies prior to adding new movies (this is necessary otherwise you will have repeat buttons)
 		$('#superButtons').empty();
 
-		// Loops through the array of movies
+		// Loops through the array of villains
 		for (var i = 0; i < villains.length; i++){
 
-			// Then dynamicaly generates buttons for each movie in the array
+			// Then dynamicaly generates buttons for each villain in the array
 
 			// Note the jQUery syntax here... 
 		    var a = $('<button>') // This code $('<button>') is all jQuery needs to create the beginning and end tag. (<button></button>)
@@ -85,7 +85,7 @@
                 $(this).attr('data-state', 'still');
             }
         });
-	$(document).on('click', '.villain', displayVillainInfo);
-	renderButtons();
+	// $(document).on('click', '.villain', displayVillainInfo);
+	// renderButtons();
      };
 
