@@ -4,3 +4,8 @@ img{
 .container{
 	margin-left: 10px;
 }
+body{
+	background: url("../images/marveldc.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}

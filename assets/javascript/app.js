@@ -13,12 +13,12 @@ $(document).ready(function () {
 		for (var i = 0; i < villains.length; i++) {
 
 			// Dynamicaly generates buttons for each villain in the array
-
+			var animate = villains[i].images.fixed_height.url;
 			var a = $('<button>'); // This code $('<button>') is all jQuery needs to create the beginning and end tag. (<button></button>)
 			a.addClass('villain'); // Added a class 
 			a.attr('data-name', villains[i]); // Added a data-attribute
 			a.attr('src', $(this).data('animate'));
-			a.attr('data-state'), $(this).attr('data-state', 'animate');
+			a.attr('data-state', $(this).attr('data-state', 'animate'));
 			a.text(villains[i]); // Provided the initial button text
 			$('#superButtons').append(a); // Added the button to the HTML
 
@@ -67,9 +67,7 @@ $(document).ready(function () {
 
 				for (var i = 0; i < results.length; i++) {
 
-					var villainDiv = $('<div>');
-
-					villainDiv.addClass("vimg")
+					var villainDiv = $('<div style = "display: inline-block">');
 
 					var p = $('<p>').text("Rating: " + results[i].rating);
 
