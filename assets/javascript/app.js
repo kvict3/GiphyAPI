@@ -9,12 +9,12 @@ $(document).ready(function () {
 		// Deletes the movies prior to adding new animals (this is necessary otherwise you will have repeat buttons)
 		$('#superButtons').empty();
 
-		// Loops through the array of movies
+		// Loops through the array of villains
 		for (var i = 0; i < villains.length; i++) {
 
 			// Dynamicaly generates buttons for each villain in the array
-			var still = villains[i].images.fixed_height.url;
-			var animate = villains[i].images.fixed_height.url;
+			// var still = villains[i].images.fixed_height.url;
+			// var animate = villains[i].images.fixed_height.url;
 			var a = $('<button>'); // This code $('<button>') is all jQuery needs to create the beginning and end tag. (<button></button>)
 			a.addClass('villain'); // Added a class 
 			a.attr('data-name', villains[i]); // Added a data-attribute
@@ -74,6 +74,11 @@ $(document).ready(function () {
 
 					var villainImage = $('<img>');
 					villainImage.attr('src', results[i].images.fixed_height_still.url);
+					villainImage.attr('data-still', results[i].images.fixed_height_still.url);
+                    villainImage.attr('data-animate', results[i].images.fixed_height.url);
+                    villainImage.attr('data-state', 'still');
+                    villainImage.addClass('vimg');
+
 
 					villainDiv.prepend(p);
 					villainDiv.prepend(villainImage);
