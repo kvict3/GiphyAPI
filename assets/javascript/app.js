@@ -13,6 +13,7 @@ $(document).ready(function () {
 		for (var i = 0; i < villains.length; i++) {
 
 			// Dynamicaly generates buttons for each villain in the array
+			var still = villains[i].images.fixed_height.url;
 			var animate = villains[i].images.fixed_height.url;
 			var a = $('<button>'); // This code $('<button>') is all jQuery needs to create the beginning and end tag. (<button></button>)
 			a.addClass('villain'); // Added a class 

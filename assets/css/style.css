@@ -8,4 +8,7 @@ body{
 	background: url("../images/marveldc.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	font-family: 'Bangers', cursive;
+	color: silver;
 }
+
